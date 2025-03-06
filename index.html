@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Churn Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Bank Customer Churn Prediction</h1>
+    
+    <div class="container">
+        <form id="churnForm">
+            <label for="credit_score">Credit Score:</label>
+            <input type="number" id="credit_score" required>
+            
+            <label for="geography">Geography (0=France, 1=Germany, 2=Spain):</label>
+            <input type="number" id="geography" required>
+
+            <label for="gender">Gender (0=Male, 1=Female):</label>
+            <input type="number" id="gender" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+            
+            <label for="tenure">Tenure:</label>
+            <input type="number" id="tenure" required>
+            
+            <label for="balance">Balance:</label>
+            <input type="number" id="balance" required>
+            
+            <label for="products">Number of Products:</label>
+            <input type="number" id="products" required>
+            
+            <label for="credit_card">Has Credit Card (0=No, 1=Yes):</label>
+            <input type="number" id="credit_card" required>
+            
+            <label for="active_member">Is Active Member (0=No, 1=Yes):</label>
+            <input type="number" id="active_member" required>
+            
+            <label for="salary">Estimated Salary:</label>
+            <input type="number" id="salary" required>
+            
+            <button type="button" onclick="predictChurn()">Predict</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
